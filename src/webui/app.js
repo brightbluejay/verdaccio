@@ -227,11 +227,11 @@ export default class App extends Component {
       ? []
       : packages.filter(pkge => {
           const keep = count < 5 && (
-            pkge.label.slice(0, inputLength).toLowerCase() === inputValue ||
-            pkge.version.slice(0, inputLength).toLowerCase() === inputValue ||
-            pkge.keywords.some(keyword => keyword.slice(0, inputLength).toLowerCase() === inputValue)
+            pkge.label && pkge.label.slice(0, inputLength).toLowerCase() === inputValue ||
+            pkge.version && pkge.version.slice(0, inputLength).toLowerCase() === inputValue ||
+            pkge.keywords && pkge.keywords.some(keyword => keyword.slice(0, inputLength).toLowerCase() === inputValue)
           );
-  
+
           if (keep) {
             count += 1;
           }

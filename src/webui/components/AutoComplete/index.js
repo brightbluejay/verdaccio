@@ -23,7 +23,7 @@ const renderInputComponent = (inputProps): Node => {
       InputProps={{
         inputRef: node => {
           ref(node);
-          inputRef();
+          inputRef(node);
         },
         startAdornment,
         disableUnderline,
@@ -36,6 +36,7 @@ const renderInputComponent = (inputProps): Node => {
 const getSuggestionValue = (suggestion): string => suggestion.label;
 
 const renderSuggestion = (suggestion, { query, isHighlighted }): Node => {
+  console.log('suggestion', suggestion);
   const matches = match(suggestion.label, query);
   const parts = parse(suggestion.label, matches);
 

@@ -132,7 +132,7 @@ class Header extends Component<IProps, IState> {
         </Link>
         <Search>
           <AutoComplete
-            suggestions={packages.map(pkage => ({ label: pkage }))}
+            suggestions={packages}
             onChange={onSearch}
             value={search}
             placeholder="Search packages"
@@ -242,14 +242,7 @@ class Header extends Component<IProps, IState> {
         {showMobileNavBar && (
           <MobileNavBar>
             <InnerMobileNavBar>
-              <AutoComplete
-                suggestions={packages.map(pkg => ({ label: pkg }))}
-                onChange={onSearch}
-                value={search}
-                placeholder="Search packages"
-                disableUnderline
-                {...others}
-              />
+              <AutoComplete suggestions={packages} onChange={onSearch} value={search} placeholder="Search packages" disableUnderline {...others} />
             </InnerMobileNavBar>
             <Button id="header--button-login" color="inherit" onClick={this.handleDismissMNav}>
               Cancel

@@ -6,7 +6,7 @@
 import { InputAdornmentProps } from '@material-ui/core/InputAdornment';
 
 export interface IProps {
-  suggestions: Array<{ label: string }>;
+  suggestions: any[];
   color?: string;
   value: string;
   placeholder?: string;
