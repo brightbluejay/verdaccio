@@ -8,7 +8,7 @@ Follow this instructions to configure a SSL certificate to serve NPM registry un
 * Update the listen property in your `~/.config/verdaccio/config.yaml`:
 
 ````
-listen: 'https://your.domain.com/'
+listen: 'https://your.domain.com:port_number/'
 ````
 
 Once you update the listen and try to run verdaccio again will ask for certificates.
